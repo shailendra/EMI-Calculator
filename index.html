@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EMI calculator</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <!-- <link rel="shortcut icon" href="assets/images/favicon.png" /> -->
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/ie-style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+            <div id="inner_page">
+                
+                <section class="section">
+                    <div class="container">
+                        <div class="no_banner_temp">
+                            <h1 class="txt_center">Calculate the monthly<br /> EMI on your loan requirement</h1>
+                            <h2>EMI calculator</h2>
+                        </div>
+
+                        <div class="emi_hld">
+                            <h2 class="color_blue">select product</h2>
+                            <ul class="product_tb_con">
+                                <li class="active_tab" data-loan-selected="25000" data-loan-min="25000"
+                                    data-loan-max="250000" data-interest-selected="10" data-interest-min="10"
+                                    data-interest-max="20" data-year-selected="2" data-year-min="2"
+                                    data-year-max="4">
+                                    <span>
+                                    </span>
+                                    EMI A
+                                </li>
+                                <li data-loan-selected="250000" data-loan-min="250000" data-loan-max="2500000"
+                                    data-interest-selected="12" data-interest-min="12"
+                                    data-interest-max="24" data-year-selected="2" data-year-min="2"
+                                    data-year-max="4">
+                                    <span>
+                                    </span>
+                                    EMI B
+                                </li>
+                                <li data-loan-selected="500000" data-loan-min="500000" data-loan-max="5000000"
+                                    data-interest-selected="14" data-interest-min="14"
+                                    data-interest-max="24" data-year-selected="2" data-year-min="2"
+                                    data-year-max="4">
+                                    <span>
+                                    </span>
+                                    EMI C
+                                </li>
+                            </ul>
+
+                            <div class="cal_panel">
+                                <div class="cal_con">
+                                    <div class="cal_fields">
+                                        <h3>select loan amount</h3>
+                                        <div class="range-slider">
+                                            <div class="cal_tooltip">25000</div>
+                                            <div id="rangeSlider" class="loanSlider">
+                                                <input class="range" sliderFor="loan">
+                                            </div>
+                                            <div class="range_val_con">
+                                                <span>25,000</span>
+                                                <span>2,50,000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cal_fields">
+                                        <h3>select interest rate</h3>
+                                        <div class="range-slider">
+                                            <div class="cal_tooltip">25000</div>
+                                            <div id="rangeSlider" class="interestSlider">
+                                                <input class="range" sliderFor="interest">
+                                            </div>
+                                            <div class="range_val_con">
+                                                <span>0%</span>
+                                                <span>15%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cal_fields cal__inr">
+                                        <h3>select tenure</h3>
+                                        <div class="range-slider">
+                                            <div class="cal_tooltip">12 months</div>
+                                            <div id="rangeSlider" class="yearSlider">
+                                                <input class="range" sliderFor="months">
+                                            </div>
+                                            <div class="range_val_con">
+                                                <span>24</span>
+                                                <span>30</span>
+                                                <span>36</span>
+                                                <span>42</span>
+                                                <span>48</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="result_panel">
+                                    <div class="graph_det_panel">
+                                        <div class="graph_det">
+                                            monthly EMI
+                                            <span class="graphMonthlyEMI">4,840</span>
+                                            <a href="#">view details</a>
+                                        </div>
+                                        <div class="graph_hld">
+                                            <!-- <img src="assets/images/pie-chart.jpg" alt=""> -->
+                                            <div class="canvas-con">
+                                                <p>Total Users</p>
+                                                <div class="canvas-con-inner">
+                                                    <canvas id="mychart" height="250px"></canvas>
+                                                </div>
+                                                <div id="my-legend-con" class="legend-con"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="break_head">
+                                        <div class="break_blurb">
+                                            <div class="indicator bg_color_green"></div>
+                                            <div class="break_head_desc">
+                                                <strong class="graphLoanAmt">50,000</strong>
+                                                <p>principal amount</p>
+                                            </div>
+                                        </div>
+                                        <div class="break_blurb">
+                                            <div class="indicator bg_color_white"></div>
+                                            <div class="break_head_desc">
+                                                <strong class="graphTotalInterest">3,029</strong>
+                                                <p>interest</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="total_amt_pay">
+                                        <span class="graphTotalPayble">53,029</span>
+                                        <p>total amount payble</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_hld">
+                                <!-- <a href="#" class="button">reset</a> -->
+                                <a href="#" class="button">apply now</a>
+                            </div>
+
+                            <h3 class="color_blue txt_center">EV loan amortization schedule</h3>
+                            <div class="selectBox_hld">
+                                <select class="selectBox">
+                                    <option>year</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+
+                            <div class="amortization_schedule">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">months</th>
+                                            <th scope="col">opening balance</th>
+                                            <th scope="col">EMI</th>
+                                            <th scope="col">interest paid monthly</th>
+                                            <th scope="col">principal paid monthly</th>
+                                            <th scope="col">closing balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr>
+                                        <td data-label="year">1</td>
+                                        <td data-label="opening balance">1,50,000</td>
+                                        <td data-label="EMI*12">58,081</td>
+                                        <td data-label="interest paid yearly">12,970</td>
+                                        <td data-label="principal paid yearly">45,111</td>
+                                        <td data-label="closing balance">1,04,889</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="year">2</td>
+                                        <td data-label="opening balance">1,50,000</td>
+                                        <td data-label="EMI*12">58,081</td>
+                                        <td data-label="interest paid yearly">12,970</td>
+                                        <td data-label="principal paid yearly">45,111</td>
+                                        <td data-label="closing balance">1,04,889</td>
+                                    </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+        <script src="assets/js/jquery.ui-min.js"></script>
+        <script src="assets/js/chart-min.js"></script>
+        <script type="module" src="assets/js/emi-calculator.js"></script>
+    </body>
+
+</html>
